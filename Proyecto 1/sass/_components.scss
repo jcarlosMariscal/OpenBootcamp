@@ -83,22 +83,24 @@ $color-footer: #f4f8fe;
   flex-direction: column;
   i {
     color: $color-main;
-    font-size: 7.5rem;
+    font-size: 5rem;
     text-align: center;
   }
   .description {
     text-align: center;
     .title {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
     .text {
       color: #888;
       font-weight: 600;
       text-align: center;
+      font-size: 0.9rem;
     }
   }
   .cta {
-    margin-top: 3rem;
+    margin-top: 1rem;
     color: $color-main;
     font-weight: 600;
     text-align: center;
@@ -113,11 +115,11 @@ $color-footer: #f4f8fe;
   justify-content: center;
   i {
     color: $color-main;
-    font-size: 10rem;
+    font-size: 6rem;
     padding: 0;
   }
   .title {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     font-size: 1.5rem;
     font-weight: 600;
   }

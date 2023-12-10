@@ -14,6 +14,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -23,6 +24,8 @@ body {
   width: 100%;
   height: 4rem;
   border-bottom: solid 1px #ddd;
+  position: fixed;
+  background-color: #fff;
 }
 
 .logo a img {
@@ -39,11 +42,11 @@ body {
       color: components.$color-main;
     }
     .home-title {
-      width: 20rem;
+      width: 35rem;
       font-size: 3rem;
     }
     .home-description {
-      width: 300px;
+      width: 400px;
     }
     .lead-magnet {
       .input-col {
@@ -55,9 +58,6 @@ body {
 
 .sec-features {
   @include section-display();
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   .intro {
     text-align: center;
     h3 {
@@ -82,6 +82,7 @@ body {
         .description {
           margin-left: 1rem;
           max-width: 20rem;
+          min-width: auto;
           .description-title {
             font-size: 1.15rem;
           }
@@ -101,8 +102,9 @@ body {
 
 .sec-benefits {
   border-top: 1px solid #ddd;
+  @include section-display();
   .intro {
-    @extend .sec-features, .intro;
+    @extend .sec-features;
   }
   .benefit-cards {
     width: 100%;
@@ -111,6 +113,7 @@ body {
 }
 
 .sec-kpis {
+  // @include section-display();
   width: 100%;
   background-color: components.$color-main;
   color: white;
@@ -131,8 +134,11 @@ body {
 }
 
 .sec-onboarding {
+  // background: orange;
+  // @include section-display();
+  // width: 100%;
   .intro {
-    @extend .sec-features, .intro;
+    @extend .sec-features;
   }
   .steps {
     padding: 0 7rem 5rem 7rem;
@@ -148,6 +154,7 @@ body {
 }
 
 .sec-footer-cta {
+  // width: 100%;
   background-color: components.$color-footer;
   padding: 5rem;
   background-image: url("../assets/img/bg.png");
@@ -165,6 +172,24 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav {
+    position: initial;
+  }
+  .sec-home {
+    .home-cta {
+      .home-title {
+        width: auto;
+      }
+      .home-description {
+        width: auto;
+      }
+      .lead-magnet {
+        .input-col {
+          max-width: auto;
+        }
+      }
+    }
+  }
   .sec-onboarding {
     .steps {
       flex-direction: column;
